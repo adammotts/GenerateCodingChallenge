@@ -2,16 +2,18 @@
 
 def repeat(
     blocks: list[str],
-    index: int
+    index: int,
+    previous_block_initial_state: str
 ) -> None:
     
     assert index != 0
     
-    blocks[index] = blocks[index].replace("!", blocks[index-1], 1)
+    blocks[index] = blocks[index].replace("!", previous_block_initial_state, 1)
     
 def reverse(
     blocks: list[str],
-    index: int
+    index: int,
+    previous_block_initial_state: str
 ) -> None:
     
     assert index != 0
@@ -22,7 +24,8 @@ def reverse(
     
 def encrypt(
     blocks: list[str],
-    index: int
+    index: int,
+    previous_block_initial_state: str
 ) -> None:
     
     assert index != 0
