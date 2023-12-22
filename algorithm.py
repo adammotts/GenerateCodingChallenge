@@ -9,7 +9,7 @@ def parse_barcode(
 ) -> str:
     
     # Valid barcodes must start and end with "#" (or be empty)
-    assert ((barcode.startswith("#") and barcode.endswith("#")) or barcode == "") == True
+    assert ((barcode.startswith("#") and barcode.endswith("#") and len(barcode) > 1) or barcode == "") == True
     
     # Split the barcode into blocks of data
     blocks = barcode.split("#")

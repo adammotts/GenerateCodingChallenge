@@ -49,6 +49,5 @@ def tests():
     assert parse_barcode(r"") == r""
     
     # Barcodes With Nothing Return Nothing
-    assert parse_barcode(r"#") == r""
     assert parse_barcode(r"##") == r""
     assert parse_barcode(r"###") == r""
