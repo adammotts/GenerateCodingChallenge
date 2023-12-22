@@ -36,7 +36,7 @@ def main():
     '''
     
     # Random Example
-    print(f'\nEnd Result: "{parse_barcode(challenge[random.randint(0, len(challenge))], demo_mode=True)}"\n\n')
+    print(f'\nEnd Result: "{parse_barcode(challenge[random.randint(0, len(challenge) - 1)], demo_mode=True)}"\n\n')
     
     correct, feedback = submit_solution(
         ENDPOINT,
