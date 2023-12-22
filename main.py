@@ -31,9 +31,7 @@ def main():
     decoded_data = [parse_barcode(barcode) for barcode in challenge]
     
     # View Of All Barcodes -> Decoded Data
-    '''
     print("\n".join(f'{barcode} -> {data}' for barcode, data in zip(challenge, decoded_data)))
-    '''
     
     # Random Example
     print(f'\nEnd Result: "{parse_barcode(challenge[random.randint(0, len(challenge) - 1)], demo_mode=True)}"\n\n')
