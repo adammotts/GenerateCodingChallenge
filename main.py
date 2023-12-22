@@ -10,23 +10,23 @@ NUID = "002942147"
 
 def main():
     
-    try:
-        token, challenge = register_user(
-            ENDPOINT,
-            NAME,
-            NUID
-        )
+    '''
+    token, challenge = register_user(
+        ENDPOINT,
+        NAME,
+        NUID
+    )
+    '''
 
-    except:
-        token = forgot_token(
-            ENDPOINT,
-            NUID
-        )
-        
-        challenge = get_challenge(
-            ENDPOINT,
-            token
-        )
+    token = forgot_token(
+        ENDPOINT,
+        NUID
+    )
+    
+    challenge = get_challenge(
+        ENDPOINT,
+        token
+    )
         
     decoded_data = [parse_barcode(barcode) for barcode in challenge]
     
